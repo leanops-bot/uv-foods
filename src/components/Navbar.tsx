@@ -25,11 +25,10 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white shadow-lg py-3'
           : 'bg-gradient-to-b from-black/60 to-transparent py-5'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -39,16 +38,14 @@ export const Navbar = () => {
             </div>
             <div className="min-w-0">
               <h1
-                className={`text-sm sm:text-base md:text-lg lg:text-xl font-bold transition-colors truncate ${
-                  isScrolled ? 'text-purple-900' : 'text-white'
-                }`}
+                className={`text-sm sm:text-base md:text-lg lg:text-xl font-bold transition-colors truncate ${isScrolled ? 'text-purple-900' : 'text-white'
+                  }`}
               >
                 UV Foods Private Limited
               </h1>
               <p
-                className={`text-xs transition-colors truncate ${
-                  isScrolled ? 'text-gray-600' : 'text-gray-200'
-                }`}
+                className={`text-xs transition-colors truncate ${isScrolled ? 'text-gray-600' : 'text-gray-200'
+                  }`}
               >
                 A Suruchi Foods Enterprise
               </p>
@@ -60,13 +57,18 @@ export const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors hover:text-purple-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-purple-600 ${isScrolled ? 'text-gray-700' : 'text-white'
+                  }`}
               >
                 {item.name}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-yellow-500 text-purple-900 font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 transform"
+            >
+              Inquire Now
+            </button>
           </div>
 
           <button
@@ -82,7 +84,7 @@ export const Navbar = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-2 bg-white rounded-lg shadow-lg">
+          <div className="md:hidden mt-4 pb-4 space-y-2 bg-white rounded-lg shadow-lg p-4">
             {navigation.map((item) => (
               <button
                 key={item.name}
@@ -92,6 +94,12 @@ export const Navbar = () => {
                 {item.name}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-purple-800 to-purple-600 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all"
+            >
+              Inquire Now
+            </button>
           </div>
         )}
       </div>

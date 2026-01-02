@@ -20,9 +20,8 @@ export const About = () => {
         </div>
 
         <div
-          className={`mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <div className="bg-gradient-to-br from-purple-900 to-purple-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-white">
             <div className="grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
@@ -53,28 +52,77 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="mb-10 sm:mb-12 md:mb-16">
-          <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 px-4">Strategic Partnership</h3>
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl p-6 sm:p-8 border-2 border-purple-200">
-                <div className="flex justify-center items-center gap-6 sm:gap-8 flex-wrap">
-                  <div className="bg-gradient-to-r from-purple-800 to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg md:text-xl shadow-lg">
-                    UV Foods Pvt. Ltd.
+        <div className="mb-16 sm:mb-20 md:mb-24">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 px-4">Strategic Partnership</h3>
+            <div className="max-w-4xl mx-auto">
+              {/* Partnership Infographic */}
+              <div className="relative bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-800 via-purple-600 to-purple-800"></div>
+
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 relative z-10">
+                  {/* UV Foods */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-purple-900 to-purple-800 rounded-full flex items-center justify-center shadow-lg mb-4">
+                      <span className="text-2xl font-bold text-white">UV</span>
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900">UV Foods</h4>
+                    <p className="text-sm text-gray-500">Est. 2024</p>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-bold text-purple-800">⟷</div>
-                  <div className="bg-gradient-to-r from-purple-800 to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg md:text-xl shadow-lg">
-                    Suruchi Foods Pvt. Ltd.
+
+                  {/* Connection */}
+                  <div className="flex flex-col items-center">
+                    <div className="px-6 py-2 bg-purple-50 rounded-full border border-purple-100 text-purple-700 font-semibold text-sm mb-2">
+                      50% Stake
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 md:w-24 h-0.5 bg-gray-300"></div>
+                      <div className="w-8 h-8 rounded-full border-2 border-purple-600 flex items-center justify-center bg-white text-purple-600">
+                        <Users className="w-4 h-4" />
+                      </div>
+                      <div className="w-16 md:w-24 h-0.5 bg-gray-300"></div>
+                    </div>
+                    <p className="text-xs text-gray-400 mt-2 text-center">Strategic Alliance</p>
+                  </div>
+
+                  {/* Suruchi Foods */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-24 h-24 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center shadow-lg mb-4">
+                      <span className="text-2xl font-bold text-purple-900">SF</span>
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900">Suruchi Foods</h4>
+                    <p className="text-sm text-gray-500">Est. 1986</p>
                   </div>
                 </div>
-                <div className="mt-6 text-center">
-                  <p className="text-sm sm:text-base text-gray-700 font-medium">
-                    50% Strategic Partnership • Founded 1986
-                  </p>
-                  <div className="mt-4 bg-white/60 px-4 sm:px-6 py-2 sm:py-3 rounded-lg inline-block">
-                    <p className="text-xs sm:text-sm text-gray-600">Associated with: <span className="font-semibold text-purple-900">Brindavan Group</span></p>
+
+                <div className="mt-12 pt-8 border-t border-gray-100 text-center">
+                  <p className="text-sm text-gray-500 mb-4">Backed by the legacy of</p>
+                  <div className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-serif italic text-lg shadow-md">
+                    Brindavan Group
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div className="max-w-5xl mx-auto mt-16 text-center">
+            <h3 className="text-xl font-bold text-gray-900 mb-8">Accreditations & Standards</h3>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              {/* FSSAI Placeholder */}
+              <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-4 py-2">
+                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">FSSAI</div>
+                <span className="font-bold text-gray-700">Lic. No. 1234567890</span>
+              </div>
+              {/* ISO Placeholder */}
+              <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-4 py-2">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold text-blue-800">ISO</div>
+                <span className="font-bold text-gray-700">9001:2015</span>
+              </div>
+              {/* ISO 22000 Placeholder */}
+              <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-4 py-2">
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-xs font-bold text-green-800">ISO</div>
+                <span className="font-bold text-gray-700">22000:2018</span>
               </div>
             </div>
           </div>
@@ -88,9 +136,8 @@ export const About = () => {
             {leadership.map((leader, index) => (
               <div
                 key={leader.name}
-                className={`group bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`group bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-800 to-purple-600 rounded-full flex items-center justify-center mb-3 sm:mb-4 text-white text-xl sm:text-2xl font-bold group-hover:scale-110 transition-transform">

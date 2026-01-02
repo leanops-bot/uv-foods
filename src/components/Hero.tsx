@@ -15,11 +15,11 @@ export const Hero = () => {
     >
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/2889440/pexels-photo-2889440.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Food Production"
+          src="/hero-factory.png"
+          alt="Modern Food Manufacturing Facility"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-purple-950/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-800/70 to-purple-950/80"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
