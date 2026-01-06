@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { CoreHighlights } from './components/CoreHighlights';
 import { Pillars } from './components/Pillars';
 import { About } from './components/About';
+import { Products } from './components/Products';
 import { Businesses } from './components/Businesses';
 import { Sustainability } from './components/Sustainability';
 import { Governance } from './components/Governance';
@@ -18,6 +19,7 @@ function App() {
       <CoreHighlights />
       <Pillars />
       <About />
+      <Products />
       <Businesses />
       <Sustainability />
       <Governance />

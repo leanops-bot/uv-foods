@@ -36,27 +36,38 @@ export const CoreHighlights = () => {
       </div>
       <div
         ref={ref}
-        className={`relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
+        className={`relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
       >
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {coreHighlights.map((highlight, index) => (
-            <div
-              key={highlight.label}
-              className="text-center transform hover:scale-105 transition-transform duration-300"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-purple-600 mb-1 sm:mb-2">
-                {isVisible && (
-                  <AnimatedCounter value={highlight.value} suffix={highlight.suffix} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {coreHighlights.map((highlight, index) => {
+            const isNumeric = /^\d+$/.test(highlight.value.replace(/[^\d.]/g, ''));
+            return (
+              <div
+                key={highlight.label}
+                className="text-center transform hover:scale-105 transition-transform duration-300"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-purple-600 mb-2">
+                  {isVisible && (
+                    isNumeric ? (
+                      <AnimatedCounter value={highlight.value.replace(/[^\d.]/g, '')} suffix={highlight.suffix || ''} />
+                    ) : (
+                      <span>{highlight.value}</span>
+                    )
+                  )}
+                </div>
+                <div className="text-gray-900 font-bold text-lg mb-2">
+                  {highlight.label}
+                </div>
+                {highlight.description && (
+                  <div className="text-gray-600 text-sm leading-tight max-w-[200px] mx-auto">
+                    {highlight.description}
+                  </div>
                 )}
               </div>
-              <div className="text-gray-600 font-medium text-xs sm:text-sm md:text-base leading-tight">
-                {highlight.label}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

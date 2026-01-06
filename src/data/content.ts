@@ -3,6 +3,7 @@ import { NavigationItem, LeadershipProfile, BusinessVertical, PlantCapacity, Imp
 export const navigation: NavigationItem[] = [
   { name: 'Home', href: '#home' },
   { name: 'About Us', href: '#about' },
+  { name: 'Our Products', href: '#products' },
   { name: 'Our Businesses', href: '#businesses' },
   { name: 'Sustainability', href: '#sustainability' },
   { name: 'Governance', href: '#governance' },
@@ -10,10 +11,30 @@ export const navigation: NavigationItem[] = [
 ];
 
 export const coreHighlights: ImpactMetric[] = [
-  { value: '35', label: 'Years of Legacy', suffix: '+' },
-  { value: '600', label: 'Districts Served', suffix: '+' },
-  { value: '580', label: 'MT Daily Production', suffix: '+' },
-  { value: '3', label: 'Generations of Leadership', suffix: '' },
+  {
+    value: '35+',
+    label: 'Years of Combined Manufacturing Legacy',
+    suffix: '',
+    description: 'through strategic partnership with Suruchi Foods Private Limited (Est. 1986)'
+  },
+  {
+    value: 'Pan-India',
+    label: 'Institutional Supply Footprint',
+    suffix: '',
+    description: 'across multiple states through government and partner-led programs'
+  },
+  {
+    value: '580+',
+    label: 'MT Daily Production',
+    suffix: '',
+    description: 'Large-scale daily nutrition supply'
+  },
+  {
+    value: 'Engaged',
+    label: 'With Multiple Govt Agencies',
+    suffix: '',
+    description: 'including ICDS, WCD-linked programs, and institutional buyers'
+  },
 ];
 
 export const pillars = [
@@ -85,7 +106,7 @@ export const businessVerticals: BusinessVertical[] = [
   },
   {
     title: 'Export & Allied Products',
-    description: 'Quality food products reaching international markets, maintaining global standards and certifications.',
+    description: 'Select products manufactured under Suruchi Foods’ facilities meet international quality and compliance standards. Export-oriented capabilities are evaluated on a contract-specific basis.',
     icon: 'Globe',
   },
 ];

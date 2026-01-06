@@ -105,25 +105,93 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Certifications */}
-          <div className="max-w-5xl mx-auto mt-16 text-center">
+          {/* Why UV Foods Section */}
+          <div className="bg-gray-50 rounded-3xl p-8 sm:p-12 mb-16 border border-gray-100">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 px-4 text-center">
+              Why UV Foods Private Limited?
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">The Collaborative Advantage</h4>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+                  UV Foods Private Limited operates as a focused contracting, execution, and supply entity, while leveraging the established manufacturing infrastructure, experience, and quality systems of Suruchi Foods Private Limited.
+                </p>
+                <div className="bg-white p-4 rounded-xl border border-gray-200">
+                  <p className="text-sm font-semibold text-purple-700 mb-2">Why this structure exists:</p>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    This structure enables operational efficiency, regulatory compliance, and scalable execution — without compromising on manufacturing reliability.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">What this means for customers:</h4>
+                <ul className="space-y-3">
+                  {[
+                    'Single-point contracting and coordination through UV Foods',
+                    'Proven manufacturing execution via Suruchi Foods (Est. 1986)',
+                    'Faster tender execution and operational flexibility',
+                    'Dedicated focus on government, institutional, and bulk supply programs'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-green-600 text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-sm text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Accreditations & Standards */}
+          <div className="max-w-5xl mx-auto text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-8">Accreditations & Standards</h3>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-              {/* FSSAI Placeholder */}
-              <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-4 py-2">
-                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">FSSAI</div>
-                <span className="font-bold text-gray-700">Lic. No. 1234567890</span>
-              </div>
-              {/* ISO Placeholder */}
-              <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-4 py-2">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold text-blue-800">ISO</div>
-                <span className="font-bold text-gray-700">9001:2015</span>
-              </div>
-              {/* ISO 22000 Placeholder */}
-              <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-4 py-2">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-xs font-bold text-green-800">ISO</div>
-                <span className="font-bold text-gray-700">22000:2018</span>
-              </div>
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 items-center cursor-pointer">
+              {/* FSSAI */}
+              <a
+                href="/assets/docs/quality-certifications.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-200"
+              >
+                <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-2 group-hover:shadow-md transition-shadow">
+                  <span className="font-bold text-gray-700">FSSAI</span>
+                </div>
+                <span className="text-xs text-gray-500 font-medium group-hover:text-purple-600">
+                  Lic. No. 127190011000645 <br /> (View Certificate)
+                </span>
+              </a>
+
+              {/* ISO 9001 */}
+              <a
+                href="/assets/docs/quality-certifications.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-200"
+              >
+                <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-2 group-hover:shadow-md transition-shadow">
+                  <span className="font-bold text-gray-700">ISO 9001:2015</span>
+                </div>
+                <span className="text-xs text-gray-500 font-medium group-hover:text-purple-600">
+                  Quality Management <br /> (View Certificate)
+                </span>
+              </a>
+
+              {/* ISO 22000 */}
+              <a
+                href="/assets/docs/quality-certifications.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-200"
+              >
+                <div className="bg-white border-2 border-gray-200 rounded-lg px-4 py-2 group-hover:shadow-md transition-shadow">
+                  <span className="font-bold text-gray-700">ISO 22000:2018</span>
+                </div>
+                <span className="text-xs text-gray-500 font-medium group-hover:text-purple-600">
+                  Food Safety <br /> (View Certificate)
+                </span>
+              </a>
             </div>
           </div>
         </div>
@@ -172,6 +240,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };

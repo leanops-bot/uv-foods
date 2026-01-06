@@ -77,6 +77,13 @@ export const Businesses = () => {
             ))}
           </div>
 
+          <div className="text-center mb-10 px-4">
+            <div className="inline-flex items-center gap-2 bg-purple-50 border border-purple-100 px-4 py-2 rounded-lg text-sm text-purple-800">
+              <span className="font-bold">ℹ️ Note:</span>
+              The following capacities represent combined processing capability through UV Foods’ operational execution and Suruchi Foods’ manufacturing infrastructure. Capacities may be deployed based on contract requirements and product mix.
+            </div>
+          </div>
+
           <div className="bg-purple-50 rounded-2xl p-6 sm:p-8 border border-purple-100">
             <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center px-4">Our Value Chain</h4>
             <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-center">

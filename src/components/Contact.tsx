@@ -41,9 +41,8 @@ export const Contact = () => {
         </div>
 
         <div
-          className={`grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <div>
             <div className="bg-gradient-to-br from-purple-900 to-purple-800 rounded-2xl p-6 sm:p-8 text-white mb-6 sm:mb-8">
@@ -56,9 +55,9 @@ export const Contact = () => {
                   <div>
                     <h4 className="text-sm sm:text-base font-semibold mb-1">Plant Location</h4>
                     <p className="text-purple-100 text-xs sm:text-sm">
-                      Chhata Industrial Area, Mathura
-                      <br />
-                      Uttar Pradesh, India
+                      Suruchi Foods Private Limited<br />
+                      Chhata Industrial Area, Mathura,<br />
+                      Uttar Pradesh – 281401, India
                     </p>
                   </div>
                 </div>
@@ -88,9 +87,11 @@ export const Contact = () => {
                 Corporate Office — Delhi
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Delhi NCR, India
+                UV Foods Private Limited<br />
+                704, 7th Floor, Deepali Building,<br />
+                92, Nehru Place, New Delhi – 110019, India
                 <br />
-                <span className="text-sm text-purple-700">Visit by appointment only</span>
+                <span className="text-sm text-purple-700 mt-2 block">Visit by appointment only</span>
               </p>
             </div>
           </div>
@@ -137,12 +138,28 @@ export const Contact = () => {
                   className="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-200 outline-none transition-all text-sm sm:text-base"
                 >
                   <option value="">Select category</option>
-                  <option value="business">Business Enquiry</option>
-                  <option value="vendor">Vendor / Supplier</option>
-                  <option value="tender">Government Tender Collaboration</option>
-                  <option value="press">Press / CSR</option>
+                  <option value="new_business">New Business Inquiry</option>
+                  <option value="tender">Government Tender / Procurement</option>
+                  <option value="bulk_supply">Bulk Supply Partnership</option>
+                  <option value="export">Export Opportunities</option>
+                  <option value="distributorship">Distributorship</option>
+                  <option value="product_info">Product Information</option>
+                  <option value="general">General Query</option>
                 </select>
               </div>
+
+              {formData.category === 'tender' && (
+                <div className="grid grid-cols-2 gap-4 animate-fadeIn">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Department / Org</label>
+                    <input type="text" className="w-full px-4 py-2 rounded-lg border border-gray-300" placeholder="e.g. WCD, ICDS" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Est. Volume (MT)</label>
+                    <input type="text" className="w-full px-4 py-2 rounded-lg border border-gray-300" placeholder="Monthly Req." />
+                  </div>
+                </div>
+              )}
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">

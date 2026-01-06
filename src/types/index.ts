@@ -26,6 +26,7 @@ export interface ImpactMetric {
   value: string;
   label: string;
   suffix?: string;
+  description?: string;
 }
 
 export interface SustainabilityPillar {
