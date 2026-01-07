@@ -67,7 +67,7 @@ export const About = () => {
                       <span className="text-2xl font-bold text-white">UV</span>
                     </div>
                     <h4 className="text-xl font-bold text-gray-900">UV Foods</h4>
-                    <p className="text-sm text-gray-500">Est. 2024</p>
+                    <p className="text-sm text-gray-500">Est. 2021</p>
                   </div>
 
                   {/* Connection */}
